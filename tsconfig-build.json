@@ -7,7 +7,7 @@
     "./.eslintrc.js",
     "./jest.config.js"
   ],
-  "include": ["./src/**/*", "./package.json"],
+  "include": ["./src/**/*"],
   "compilerOptions": {
     "sourceMap": false
   }

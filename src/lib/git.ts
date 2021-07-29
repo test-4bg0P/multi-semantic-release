@@ -26,12 +26,11 @@ export function getTags(
     .map(tag => tag.trim())
     .filter(Boolean)
 
-  if ((filters == null) || (filters.length === 0)) {
+  if (filters == null || filters.length === 0) {
     return tags
   }
 
-  const validateSubstr = (t: string, f: string[]) =>
-    !!f.find(v => t.includes(v))
+  const validateSubstr = (t: string, f: string[]) => f.every(v => t.includes(v))
 
   return tags.filter(tag => validateSubstr(tag, filters))
 }

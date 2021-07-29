@@ -1,21 +1,20 @@
 {
-  "name": "multi-semantic-release",
+  "name": "@payfit/multi-semantic-release",
   "author": "Dave Houlbrooke <dave@shax.com>",
-  "version": "0.0.0-semantically-released",
+  "version": "3.16.0-alpha.9",
   "license": "0BSD",
   "engines": {
     "node": ">=10.18",
     "yarn": ">=1.0.0"
   },
-  "main": "dist/src/lib/multiSemanticRelease.js",
+  "main": "dist/lib/multiSemanticRelease.js",
   "bin": {
-    "multi-semantic-release": "./dist/src/bin/cli.js"
+    "multi-semantic-release": "dist/bin/cli.js"
   },
   "files": [
     "README.md",
     "CHANGELOG.md",
-    "lib",
-    "bin"
+    "dist"
   ],
   "scripts": {
     "build": "tsc -p tsconfig-build.json",
@@ -23,8 +22,7 @@
     "lint:fix": "eslint --fix ./",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "prepublish": "yarn build",
-    "publish": "semantic-release"
+    "prepublish": "yarn build"
   },
   "husky": {
     "hooks": {

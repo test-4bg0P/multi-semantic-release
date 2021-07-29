@@ -13,7 +13,7 @@
     "suppressImplicitAnyIndexErrors": false,
     "downlevelIteration": true,
     "resolveJsonModule": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": false,
     "strict": true,
     "module": "commonjs",
@@ -22,7 +22,7 @@
     "baseUrl": ".",
     "outDir": "dist",
     "typeRoots": ["./node_modules/@types", "./typings"],
-    "rootDir": "."
+    "rootDir": "./src"
   },
   "include": [
     "./src/**/*",

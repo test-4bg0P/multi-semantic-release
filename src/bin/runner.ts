@@ -1,10 +1,12 @@
 import semrelPkgJson from 'semantic-release/package.json'
+import debugFactory from 'debug'
 
 import getPackagePaths from '../lib/getPackagePaths'
 import multiSemanticRelease from '../lib/multiSemanticRelease'
-import multisemrelPkgJson from '../../package.json'
+import { CoreProperties } from '@schemastore/package'
 
-import debugFactory from 'debug'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const multisemrelPkgJson: CoreProperties = require('../../package.json')
 
 export default (flags: Record<string, any>) => {
   if (flags.debug) {
@@ -16,7 +18,9 @@ export default (flags: Record<string, any>) => {
 
   // Catch errors.
   try {
-    console.log(`multi-semantic-release version: ${multisemrelPkgJson.version}`)
+    console.log(
+      `multi-semantic-release version: ${multisemrelPkgJson.version ?? 0}`,
+    )
     console.log(`semantic-release version: ${semrelPkgJson.version}`)
     console.log(`flags: ${JSON.stringify(flags, null, 2)}`)
 

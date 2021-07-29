@@ -222,12 +222,7 @@ export const getNextPreVersion = (
     isNewPreRelTag ?? !lastVersion
       ? // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         `1.0.0-${pkg._preRelease}.1`
-      : _nextPreVersionCases(
-          tags.map(tag => getVersionFromTag(pkg, tag)).filter(isNotNull),
-          lastVersion,
-          pkg._nextType,
-          pkg._preRelease,
-        )
+      : getLatestVersion(tags.map(tag => getVersionFromTag(pkg, tag)).filter(isNotNull), true)
 
   return versionToSet ?? undefined
 }
@@ -307,6 +302,8 @@ const getDependentRelease = (
         if (nextType) {
           nextVersion = p._preRelease ? getNextPreVersion(p) : getNextVersion(p)
         }
+
+        
         const lastVersion = pkg._lastRelease?.version
 
         // 3. And this change should correspond to manifest updating rule.
