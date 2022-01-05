@@ -241,4 +241,4 @@ To make the `tagFormat` option work as intended the following would need to happ
 
 ## License
 
-[OSBD](https://github.com/PayFit/multi-semantic-release/blob/master/LICENSE.md)
+[0BSD](https://github.com/PayFit/multi-semantic-release/blob/master/LICENSE.md)
