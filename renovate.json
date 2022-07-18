@@ -37,5 +37,8 @@
     "supportPolicy": ["lts_latest"]
   },
   "postUpdateOptions": ["yarnDedupeHighest"],
-  "includeForks": true
+  "includeForks": true,
+  "platformAutomerge": true,
+  "automergeType": "branch",
+  "ignoreTests": false
 }
