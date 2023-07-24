@@ -32,10 +32,6 @@
     }
   ],
   "labels": ["dependencies"],
-  "node": {
-    "enabled": true,
-    "supportPolicy": ["lts_latest"]
-  },
   "postUpdateOptions": ["yarnDedupeHighest"],
   "includeForks": true,
   "platformAutomerge": true,
