@@ -17,6 +17,7 @@ jobs:
         run: yarn --frozen-lockfile
       - run: yarn lint
       - run: yarn format:check
+      - run: pwd
 
   test-and-build:
     runs-on: ubuntu-latest
